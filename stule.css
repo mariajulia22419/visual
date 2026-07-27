@@ -1,0 +1,67 @@
+/* Resets básicos e variáveis para fácil manutenção */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #1a1a1a;
+  --primary-color: #005a9c; /* Contraste adequado com texto branco */
+  --focus-ring: #d04400;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 1.25rem; /* Usando rem para responsividade */
+}
+
+/* Link para saltar navegação (visível apenas ao focar via Teclado) */
+.skip-link {
+  position: absolute;
+  top: -3.125rem;
+  left: 0;
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Foco visível global extremamente importante para navegabilidade por teclado */
+a:focus-visible, 
+button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Estilos básicos de componentes */
+header {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+  background-color: #e9f3fb;
+}
