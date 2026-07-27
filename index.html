@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicações Acessíveis - Exemplo Prático</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header>
+    <h1>Inclusão Digital</h1>
+    <nav aria-label="Navegação Principal">
+      <button 
+        id="menu-btn" 
+        aria-expanded="false" 
+        aria-controls="nav-menu"
+        aria-label="Abrir menu de navegação">
+        Menu ☰
+      </button>
+      <ul id="nav-menu" class="nav-list hidden">
+        <li><a href="#direitos">Direitos Digitais</a></li>
+        <li><a href="#praticas">Boas Práticas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <section id="direitos">
+      <h2>Direitos Digitais e Acessibilidade</h2>
+      <p>
+        A acessibilidade na web garante a autonomia de pessoas com deficiência, alinhando-se à
+        <strong>Lei Brasileira de Inclusão (LBI)</strong> e às diretrizes internacionais da 
+        <strong>WCAG</strong>.
+      </p>
+    </section>
+
+    <section id="praticas">
+      <h2>Interação Dinâmica Acessível</h2>
+      <p>Clique no botão abaixo para simular uma atualização do DOM com anúncio de leitor de tela:</p>
+      
+      <button id="notify-btn" class="btn-primary">Enviar Notificação</button>
+
+      <div id="live-region" aria-live="polite" class="status-box"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Desenvolvido com foco em acessibilidade e inclusão social.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
